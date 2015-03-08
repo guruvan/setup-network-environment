@@ -62,6 +62,24 @@ ExecStart=/opt/bin/kubelet --hostname_override=${ENO16777736_IPV4}
 
 ## Building
 
+Dockerfile and scripts are provided for building
+build.sh accepts the following env variables and defaults
+
+```
+REPO=guruvan
+NAME=setup-network-environment
+TARGET=/opt/bin
+
+```
+ git clone https://github.com/guruvan/setup-network-environment
+ ./build.sh
+
+```
+with no varibables build.sh will build guruvan/setup-network-environment, run it,
+and deposit the binary to  <code>/opt/bin/setup-network-environment</code>
+
+## Alternate Build
+
 ```
 mkdir -p "${GOPATH}/src/github.com/kelseyhightower"
 cd "${GOPATH}/src/github.com/kelseyhightower"
